@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "Ziyotek_Terraform_Class_Summer_Cloud"
+    organization = "024_2023-summer-cloud"
 
     workspaces {
       name = "oct-31-lab"
