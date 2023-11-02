@@ -48,7 +48,7 @@ resource "aws_route_table_association" "a" {
 resource "aws_instance" "main" {
   ami           = "ami-0df435f331839b2d6"
   instance_type = "t2.micro"
-  key_name      = "key_pair_1"
+  key_name      = "ec2labhomework"
 
   subnet_id              = aws_subnet.main.id
   vpc_security_group_ids = [module.security_groups.security_group_id["web_sg"]]
