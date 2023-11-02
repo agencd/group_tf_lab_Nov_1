@@ -18,13 +18,14 @@ jobs:
       - uses: actions/checkout@v3
       - uses: hashicorp/setup-terraform@v2
         with:
-          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN}}
+          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+
       - name: Run Terraform Init
         run: terraform init
-        working-directory: .
+       
       - name: Run Terraform Plan
-        run: terraform plan -var-file terraform.tfvars
-        working-directory: .
+        run: terraform plan
+        
       - name: Run Terraform Apply
-        run: terraform apply -var-file terraform.tfvars -auto-approve
-        working-directory: .
+        run: terraform apply -auto-approve
+       
